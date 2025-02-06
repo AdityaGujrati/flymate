@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
+import java.util.List;
 
 @Document(collection = "booking")
 @Data
@@ -18,11 +19,11 @@ import java.util.Date;
 public class Booking {
 
     @Id
-    private Integer bookingId;
-    private String flighId;
-    private String passengerId;
-    private Date bookingDate;
+    private String bookingId;
+    private String flightId;
+    private List<Passenger> passengerList;
+    private String bookingDate;
     private Integer seatNumber;
-
+    private Integer schedulerId;
 
 }

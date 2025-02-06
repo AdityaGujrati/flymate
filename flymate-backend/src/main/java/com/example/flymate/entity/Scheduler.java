@@ -1,13 +1,14 @@
 package com.example.flymate.entity;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Builder
@@ -17,8 +18,12 @@ import java.time.LocalDateTime;
 public class Scheduler {
 
     @Id
-    private Integer schedulerId;
+    private String schedulerId;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
+    private String departureAirport;
+    private String arrivalAirport;
+    private String flightId;
+    private List<Passenger> passengerList;
 
 }

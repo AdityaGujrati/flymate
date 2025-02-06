@@ -18,7 +18,6 @@ public class Passenger {
     private Integer passengerId;
     private String firstName;
     private String lastName;
-
-    private Booking booking;
+    private String bookingId;
 
 }

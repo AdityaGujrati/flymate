@@ -16,5 +16,7 @@ public class SchedulerRequest {
     private String day;
     private String startTime;
     private String endTime;
+    private String departureAirport;
+    private String arrivalAirport;
 
 }

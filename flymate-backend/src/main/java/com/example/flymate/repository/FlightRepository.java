@@ -9,7 +9,6 @@ import java.util.List;
 
 @Repository
 public interface FlightRepository extends MongoRepository<Flight , Integer> {
-
-    List<Flight> findFlightByDepartureAirportAndArrivalAirport(String departureAirport,String ArrivalAirport);
-
+    List<Flight> findByFlightIdIn(List<String> flightIds);
+    Flight findByFlightId(String flightId);
 }

@@ -16,12 +16,10 @@ import java.util.List;
 @NoArgsConstructor
 public class Flight {
 
-    private Integer flightId;
+    @Id
+    private String flightId;
     private Airline airline;
-    private String departureAirport;
-    private String arrivalAirport;
 
-    private List<Passenger> passengerList;
     private List<Scheduler> schedulerList;
 
 }
